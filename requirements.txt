@@ -8,8 +8,8 @@
 --extra-index-url https://download.pytorch.org/whl/cu118 # for cuda
 # --extra-index-url https://download.pytorch.org/whl/torch_stable.html # for cpu
 spacy>=3.5.0,<4.0.0
-en_core_web_trf
 numpy>=1.15.0
+spacy-transformers
 transformers[sentencepiece]>=3.4.0,<4.37.0
 torch>=1.8.0
 srsly>=2.4.0,<3.0.0
@@ -25,4 +25,4 @@ types-dataclasses>=0.1.3; python_version < "3.7"
 gradio
 openai
 pandas
-
+scikit-learn

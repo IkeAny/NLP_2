@@ -1,3 +1,4 @@
+# run python -m spacy download en_core_web_trf and pip install -r requirements.txt
 import spacy
 import gradio as gr
 import pandas as pd
