@@ -6,7 +6,7 @@ from collections import Counter
 import openai
 
 # Directly set your OpenAI API key here
-openai.api_key = "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"
+openai.api_key = "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"
 
 # Load the spaCy model
 try:
