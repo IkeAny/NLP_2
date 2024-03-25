@@ -21,7 +21,7 @@ def analyze_text(text, num_words, quality):
     excluding certain common words.
     """
     # Extend the default ENGLISH_STOP_WORDS list with your custom stop words
-    custom_stop_words = set(ENGLISH_STOP_WORDS).union({"you", "for", "etc"})
+    custom_stop_words = set(ENGLISH_STOP_WORDS).union({"you", "for", "like", "got", "going"})
 
     doc = nlp(text)
     entities = [(ent.text, ent.label_) for ent in doc.ents][:num_words]
