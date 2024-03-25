@@ -25,6 +25,7 @@ This tool requires Python and specific libraries. Here's how to set it up locall
 ``Anaconda``: https://www.anaconda.com/
 
 ``Visual Studio Code``: https://code.visualstudio.com/
+
 **Installation**:
 
 1. Install Anaconda following their instructions.
