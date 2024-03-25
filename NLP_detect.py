@@ -1,32 +1,41 @@
-# run python -m spacy download en_core_web_trf and pip install -r requirements.txt
 import spacy
 import gradio as gr
 import pandas as pd
-from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.feature_extraction.text import TfidfVectorizer, ENGLISH_STOP_WORDS
 from collections import Counter
 import openai
 
 # Directly set your OpenAI API key here
-openai.api_key = "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"
+openai.api_key = "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"
 
 # Load the spaCy model
-nlp = spacy.load("en_core_web_trf")
+try:
+    nlp = spacy.load("en_core_web_trf")
+except IOError:
+    spacy.cli.download("en_core_web_trf")
+    nlp = spacy.load("en_core_web_trf")
 
 def analyze_text(text, num_words, quality):
     """
-    Analyzes text using spaCy for NER and ranks keywords based on occurrence in the text.
+    Analyzes text using spaCy for NER and ranks keywords based on occurrence in the text,
+    excluding certain common words.
     """
+    # Extend the default ENGLISH_STOP_WORDS list with your custom stop words
+    custom_stop_words = set(ENGLISH_STOP_WORDS).union({"you", "for", "etc"})
+
     doc = nlp(text)
     entities = [(ent.text, ent.label_) for ent in doc.ents][:num_words]
     entities_df = pd.DataFrame(entities, columns=["Entity", "Type"])
     
-    vectorizer = TfidfVectorizer(stop_words='english')
+    # Use the extended list of stop words in TfidfVectorizer
+    vectorizer = TfidfVectorizer(stop_words=custom_stop_words)
     tf_idf_matrix = vectorizer.fit_transform([text])
     feature_array = vectorizer.get_feature_names_out()
     tfidf_sorting = tf_idf_matrix.toarray()[0].argsort()[::-1]
     
     top_keywords = feature_array[tfidf_sorting][:num_words]
-    word_counts = Counter([word for word in text.lower().split() if word in top_keywords])
+    filtered_text = ' '.join([word for word in text.lower().split() if word not in custom_stop_words])
+    word_counts = Counter([word for word in filtered_text.split() if word in top_keywords])
     keywords_counts = [(word, count) for word, count in word_counts.items()]
     keywords_df = pd.DataFrame(keywords_counts, columns=["Keyword", "Count"]).sort_values(by="Count", ascending=False)
     
