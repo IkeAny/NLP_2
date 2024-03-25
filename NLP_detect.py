@@ -48,14 +48,15 @@ def generate_description(question, text, keywords, quality, temperature):
     """
     Generates a description using OpenAI's GPT-3.5 Turbo model based on the input text,
     incorporating the provided question (if any), focusing on the important keywords,
-    and adjusting for quality and temperature.
+    and adjusting for quality and temperature. The response is structured to start with "students".
     """
     keywords_str = ", ".join(keywords['Keyword'])
     
+    # Prepend "Students" to the beginning of the prompt for both question and summary cases
     if question.strip():
-        prompt = f"Based on the text: '{text}' and considering these keywords: {keywords_str}, answer the question: '{question}'."
+        prompt = f"Students {question} Based on the text: '{text}' and considering these keywords: {keywords_str}, answer the question."
     else:
-        prompt = f"Summarize the following text, making sure to emphasize these keywords: {keywords_str}. Text: '{text}'"
+        prompt = f"Students, summarize the following text, making sure to emphasize these keywords: {keywords_str}. Text: '{text}'"
     
     model = "gpt-3.5-turbo-instruct-0914"
     max_tokens = 100 if quality == "Speed" else 150
@@ -68,6 +69,7 @@ def generate_description(question, text, keywords, quality, temperature):
     )
     
     return response['choices'][0]['text'].strip()
+
 
 def NLP_analysis(question, text, num_words, quality, temperature):
     keywords_df, entities_df = analyze_text(text, num_words, quality)
