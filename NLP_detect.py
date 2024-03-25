@@ -21,14 +21,17 @@ def analyze_text(text, num_words, quality):
     excluding certain common words.
     """
     # Extend the default ENGLISH_STOP_WORDS list with your custom stop words
-    custom_stop_words = set(ENGLISH_STOP_WORDS).union({"you", "for", "like", "got", "going"})
+    custom_stop_words = set(ENGLISH_STOP_WORDS).union({"you", "for", "like", "got", "going", "said", "thing"})
+
+    # Convert the set to a list
+    custom_stop_words_list = list(custom_stop_words)
 
     doc = nlp(text)
     entities = [(ent.text, ent.label_) for ent in doc.ents][:num_words]
     entities_df = pd.DataFrame(entities, columns=["Entity", "Type"])
     
-    # Use the extended list of stop words in TfidfVectorizer
-    vectorizer = TfidfVectorizer(stop_words=custom_stop_words)
+    # Use the list of stop words in TfidfVectorizer
+    vectorizer = TfidfVectorizer(stop_words=custom_stop_words_list)
     tf_idf_matrix = vectorizer.fit_transform([text])
     feature_array = vectorizer.get_feature_names_out()
     tfidf_sorting = tf_idf_matrix.toarray()[0].argsort()[::-1]
