@@ -8,6 +8,9 @@ import openai
 # Directly set your OpenAI API key here
 openai.api_key = "your_open_AI_key"
 
+#Set an environment locally and load your API key here
+#openai.api_key = os.getenv("OPENAI_API_KEY")
+
 # Load the spaCy model
 try:
     nlp = spacy.load("en_core_web_trf")
