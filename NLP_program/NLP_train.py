@@ -12,7 +12,7 @@ sys.path.append('NLP_program')
 sys.path.append('NLP_MachineLearning')
 sys.path.append('./')
 
-def load_data(filepath='data/sentiment2_data.csv'):
+def load_data(filepath='data/sentiment1_data.csv'):
     df = pd.read_csv(filepath)
     # Correctly format 'cats' as {'positive': True, 'negative': False} directly
     df['cats'] = df.label.apply(lambda x: {'positive': x == 'positive', 'negative': x == 'negative'})

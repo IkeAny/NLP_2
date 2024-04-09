@@ -18,11 +18,11 @@ def retrain_and_download(user_text, user_label):
     train_data.append(new_data)
     
     # Train and save the updated model
-    train_nlp_model(train_data, valid_data, 'model_sentiment_updated')
+    train_nlp_model(train_data, valid_data, 'model_sentiment')
     
     # Zip the updated model directory for download
-    shutil.make_archive('model_sentiment_updated', 'zip', 'model_sentiment_updated')
-    return 'model_sentiment_updated.zip'
+    shutil.make_archive('model_sentiment', 'zip', 'model_sentiment')
+    return 'model_sentiment.zip'
 
 def build_train_interface():
     with gr.Blocks(theme=shared_theme) as app:
@@ -38,7 +38,11 @@ def build_train_interface():
         with gr.Row():
             text_input = gr.Textbox(label="Input Text", placeholder="Type your sentiment text here...")
             label_input = gr.Radio(choices=["positive", "negative"], label="Sentiment")
+
+        with gr.Row():
             submit_btn = gr.Button("Submit and Retrain")
+
+            
         output = gr.File(label="Download Updated Model")
 
         clear_comp_list = [text_input, label_input, output]
