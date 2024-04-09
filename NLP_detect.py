@@ -62,7 +62,7 @@ def generate_description(question, text, keywords, quality, temperature):
         prompt = f"Students, summarize the following text, making sure to emphasize these keywords: {keywords_str}. Text: '{text}'"
     
     model = "gpt-3.5-turbo-instruct-0914"
-    max_tokens = 100 if quality == "Speed" else 150
+    max_tokens = 200 if quality == "Speed" else 350
 
     response = openai.Completion.create(
         model=model,

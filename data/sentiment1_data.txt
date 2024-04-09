@@ -1,0 +1,182 @@
+text,label
+"The new update makes the app much more efficient and easier to use.",positive
+"I waited in line for hours only to receive poor customer service.",negative
+"The concert was an unforgettable experience, truly a night to remember!",positive
+"This car rental service is overpriced for the quality of vehicles provided.",negative
+"The graphics and gameplay of this game are outstanding.",positive
+"I'm disappointed with the durability of this backpack; it tore after a week.",negative
+"Finally found a coffee shop that makes the perfect latte.",positive
+"The plot was predictable and lacked originality.",negative
+"Highly recommend this hotel, great location and friendly staff.",positive
+"The movie had stunning visuals but was let down by a weak storyline.",negative
+"Our guide was knowledgeable and made the tour engaging and informative.",positive
+"The product arrived three weeks late and customer support was unhelpful.",negative
+"Loved the workshop! The hands-on approach made learning so much fun.",positive
+"The service at the restaurant was slow, and our orders were mixed up.",negative
+"An excellent read that was both thought-provoking and deeply moving.",positive
+"The construction quality is mediocre at best; not what I expected at this price point.",negative
+"Attending the live event was an amazing experience; the atmosphere was electric!",positive
+"The software frequently crashes, making it frustrating to use.",negative
+"The course content was outdated and not as comprehensive as advertised.",negative
+"This bakery has the best pastries; everything is fresh and delicious!",positive
+"The hotel room was not cleaned properly and had a musty smell.",negative
+"A brilliant exhibition that was both enlightening and visually captivating.",positive
+"The online course was well-structured, offering deep insights and practical knowledge.",positive
+"Disappointing experience, the device stopped working after two months, and support was unresponsive.",negative
+"The conference was well-organized with a diverse range of insightful speakers.",positive
+"Terrible user experience, the app crashes constantly and is full of bugs.",negative
+"The customer service team went above and beyond to resolve my issue.",positive
+"Very unprofessional service, they missed two deadlines and communication was poor.",negative
+"The fitness class was energizing and the instructor was very motivating.",positive
+"The sequel lacks the charm and depth of the original, feeling unnecessary.",negative
+"I love the new design of the app, it's very user-friendly.",positive
+"The customer service was unhelpful and rude.",negative
+"Absolutely fantastic! This has made my day.",positive
+"I found the plot confusing and the characters unlikable.",negative
+"The installation was quick and straightforward, no issues.",positive
+"Sadly, the product broke after just one use.",negative
+"Thrilled with the fast shipping and excellent quality!",positive
+"Terrible experience, I would not recommend this to anyone.",negative
+"The movie was a rollercoaster of emotions, beautifully done.",positive
+"I’ve seen better performances; this didn’t meet my expectations.",negative
+"Delicious and served hot, exactly what I wanted.",positive
+"The room was dirty and smelled like smoke.",negative
+"Incredible book, I couldn't put it down!",positive
+"The software update is buggy and causes crashes.",negative
+"Very satisfied with the professional and efficient service.",positive
+"The meal was cold and my order was incorrect.",negative
+"An innovative approach to classic themes, very refreshing!",positive
+"Product failed to work as advertised, very disappointed.",negative
+"Exceeded my expectations, with outstanding attention to detail.",positive
+"Awful, the material feels cheap and poorly made.",negative
+"Finally found a reliable car service. Drivers are professional and courteous.",positive
+"The app constantly crashes on my phone, making it unusable.",negative
+"Stunning visuals and a groundbreaking soundtrack, a true masterpiece.",positive
+"The coffee tasted stale and was barely warm.",negative
+"Superb customer support, they resolved my issue within minutes.",positive
+"The sequel lacks the charm and wit of the original. Quite disappointing.",negative
+"Easy to navigate website and my items arrived sooner than expected.",positive
+"The hotel was overpriced for the lackluster service and mediocre room quality.",negative
+"An enlightening read that offers deep insights into the subject matter.",positive
+"Extremely slow service, and the food was not worth the wait.",negative
+"Highly intuitive software, making tasks easier and more efficient.",positive
+"The plot was predictable and filled with clichés. Not engaging at all.",negative
+"Exquisite craftsmanship, the piece is even more beautiful in person.",positive
+"Disorganized event with no clear instructions for attendees. Frustrating experience.",negative
+"The camera takes sharp, vibrant photos even in low light conditions.",positive
+"Uncomfortable seats and a malfunctioning air conditioner made the trip unbearable.",negative
+"The workshop was informative and interactive; I learned a lot.",positive
+"Pathetic after-sales service, my complaints have gone unanswered for weeks.",negative
+"Refreshing and light, this is the perfect summer drink!",positive
+"Poor sound quality ruins the experience of this pricey headset.",negative
+"Robust and reliable, this tool has become indispensable in my daily work.",positive
+"The room had a spectacular view, making our stay unforgettable.",positive
+"Shipment arrived damaged, and the return process has been a nightmare.",negative
+"An absolute gem of a restaurant, every dish was a delight.",positive
+"The interface is cluttered and unintuitive, leading to a frustrating user experience.",negative
+"This novel explores complex themes with nuance and compassion.",positive
+"The vacation rental was in a state of disrepair and not as advertised.",negative
+"Delightful ambiance and meticulous service made for a memorable evening.",positive
+"Product does not match the description at all, complete waste of money.",negative
+"Enthralling performance that captivated the audience from start to finish.",positive
+"The thermostat broke down within a week of installation, very poor quality.",negative
+"Thrilling from start to finish, kept me on the edge of my seat!",positive
+"Utterly disappointing, not at all what I expected.",negative
+"The renovation results are stunning, exceeding all our expectations.",positive
+"Completely underwhelmed by the taste and presentation of the meal.",negative
+"Customer service went above and beyond to ensure satisfaction.",positive
+"Feels like a downgrade from the previous version, honestly.",negative
+"A truly enlightening seminar that broadened my perspective.",positive
+"Struggled to stay awake through the dull presentation.",negative
+"The software installation was a breeze, no hiccups.",positive
+"An absolute rip-off for the quality provided, not recommended.",negative
+"Such a heartwarming story, it brought tears to my eyes.",positive
+"Failed to deliver on time, and the support was unhelpful.",negative
+"Exquisite painting, the online photos don't do it justice.",positive
+"The noise levels in the room made it impossible to relax.",negative
+"An innovative approach to traditional cuisine, absolutely delightful.",positive
+"Incredibly buggy app that crashes every few minutes.",negative
+"The staff made us feel right at home from the moment we arrived.",positive
+"Highly misleading advertising, stay away from this product.",negative
+"Remarkable performance, it was a night to remember.",positive
+"The mattress is uncomfortable and gave me back pain.",negative
+"Such an intuitive design, I was able to use it without any instructions.",positive
+"Left feeling unsatisfied with the portions and overall quality of the food.",negative
+"A masterpiece that captures the complexity of human emotions.",positive
+"The vehicle's performance in snow is subpar at best.",negative
+"Finally, a solution that addresses all my needs effectively.",positive
+"The ending was abrupt and left many questions unanswered.",negative
+"Durable and reliable, it's lasted me years without a single issue.",positive
+"Extremely overpriced for what you actually get.",negative
+"The conference was well-organized and packed with valuable insights.",positive
+"Disastrous service, and they refused to issue a refund.",negative
+"Captivating narrative that keeps you hooked till the very end.",positive
+"The product arrived damaged, and customer service was no help.",negative
+"A seamless blend of comedy and drama, brilliantly executed.",positive
+"Completely inaccessible customer service, very frustrating.",negative
+"Delivers on its promise, providing noticeable results in weeks.",positive
+"The layout is cluttered and confusing, detracting from the experience.",negative
+"Packed with features that make it a versatile tool for many tasks.",positive
+"The construction next door made my stay a nightmare.",negative
+"Offers a fresh perspective on a well-trodden genre.",positive
+"Waited over an hour for our food, which arrived cold.",negative
+"Robust security features that give me peace of mind.",positive
+"The plot relies on tired clichés and predictable twists.",negative
+"Easy to set up and integrate with my existing devices.",positive
+"The taste did not live up to the hype, quite bland.",negative
+"Exceptional clarity in the audio, with no distortion at high volumes.",positive
+"Utterly tasteless and overpriced. A total letdown.",negative
+"A compelling argument presented in a clear and thoughtful manner.",positive
+"Material feels cheap and not durable. Disappointing quality.",negative
+"Workouts are varied and challenging, perfect for staying motivated.",positive
+"A complete failure to address the main issues. Very unsatisfactory.",negative
+"Enchanting storytelling that kept me mesmerized till the very end.",positive
+"Pathetic battery life, it doesn't last half a day even with minimal use.",negative
+"The workshop was a goldmine of practical tips and insights.",positive
+"Unbelievably disappointing, the product broke down within a week.",negative
+"Customer service was stellar, they resolved my issue in no time!",positive
+"The hotel's pictures were deceiving; the actual conditions were deplorable.",negative
+"Innovative features set this product apart from its competitors.",positive
+"A complete waste of time, the event was disorganized and poorly executed.",negative
+"Kudos to the chef! Every dish was bursting with flavor.",positive
+"The app's interface is clunky and unintuitive. A major letdown.",negative
+"Exceptionally friendly staff who went above and beyond to ensure we had a pleasant stay.",positive
+"Extremely difficult to navigate, and the instructions were useless.",negative
+"The course offered deep insights and was incredibly enlightening.",positive
+"Absolutely horrific customer service, I've never been treated so poorly.",negative
+"Feels sturdy and well-made, I'm confident it will last a long time.",positive
+"Overpriced for the mediocre quality offered. Not recommended.",negative
+"The performance was captivating, leaving the audience in awe.",positive
+"The plot was paper-thin and riddled with holes. Utterly unconvincing.",negative
+"An intuitive app that simplifies the process significantly.",positive
+"Rude staff and terrible service, completely ruined my experience.",negative
+"Outstanding quality, exceeded my expectations for the price point.",positive
+"The texture was off, and it had an unpleasant aftertaste.",negative
+"Provides a unique and fascinating perspective on history.",positive
+"Totally unreliable, it fails to work when you need it the most.",negative
+"A seamless and hassle-free transaction, very pleased with the experience.",positive
+"The sequel lacks the original's creativity and feels like a cash grab.",negative
+"An absolute joy to use, it has significantly improved my daily routine.",positive
+"Leaves skin feeling greasy and caused a breakout. Would not recommend.",negative
+"The narrative is thought-provoking, challenging conventional views.",positive
+"Dreadful sound quality, making it impossible to enjoy the music.",negative
+"Exceeds expectations with its rapid performance and durability.",positive
+"The service at the restaurant was slow, and the staff seemed overwhelmed.",negative
+"Remarkably comfortable for long periods of use, without causing discomfort.",positive
+"The instructions were confusing, leading to a frustrating setup process.",negative
+"Striking visuals and a compelling storyline make for an unforgettable experience.",positive
+"Misleading product description; it doesn't perform as advertised.",negative
+"Efficiently reduces noise, creating a peaceful working environment.",positive
+"The material feels thin and cheap, likely to tear easily.",negative
+"An inspiring documentary that sheds light on important issues.",positive
+"Waited months for delivery only to receive the wrong item.",negative
+"The plot twists were unpredictable, adding depth to the story.",positive
+"The device overheats quickly, making it dangerous to use.",negative
+"Lightweight and portable, it's perfect for my traveling needs.",positive
+"Failed to meet the hype, leaving much to be desired.",negative
+"Superb craftsmanship, it's clear a lot of attention to detail was paid.",positive
+"The warranty does not cover common issues, rendering it pointless.",negative
+"A robust collection of features that cater to a wide range of needs.",positive
+"Very sour and almost inedible. Extremely disappointed with the quality.",negative
+"Supports a great cause and delivers an excellent product as well.",positive
+"False advertising; the actual product looks nothing like the photos.",negative
