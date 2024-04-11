@@ -1,5 +1,6 @@
 import sys
 import gradio as gr
+import openai
 import pandas as pd
 from NLP_program.NLP_detect import analyze_text, generate_description
 
@@ -10,14 +11,24 @@ sys.path.append('./')
 
 shared_theme = gr.themes.Base()
 
-def complete_analysis(text, question, num_words, quality, temperature):
-    if text.strip():
-        entities_df, keywords_df, sentiment_score = analyze_text(text, num_words)
-        keywords = keywords_df['Keyword'].tolist()
-        description = generate_description(question, text, keywords, quality, temperature)
-        return entities_df, keywords_df, description
-    else:
-        return pd.DataFrame(), pd.DataFrame(), "No text provided."
+# def openai_key(openai_api_key):
+#     openai.api_key = openai_api_key
+
+# def complete_analysis(text, question, num_words, quality, temperature):
+#     #openai.api_key = openai_api_key
+#     if text.strip():
+#         entities_df, keywords_df, sentiment_score = analyze_text(text, num_words)
+#         keywords = keywords_df['Keyword'].tolist()
+#         description = generate_description(question, text, keywords, quality, temperature)
+#         return entities_df, keywords_df, description
+#     else:
+#         return pd.DataFrame(), pd.DataFrame(), "No text provided."
+    
+
+def complete_analysis(text, question, num_words, quality, temperature, api_key):
+    entities_df, keywords, sentiment_score = analyze_text(text, num_words)
+    description = generate_description(question, text, keywords, quality, temperature, api_key)
+    return entities_df, keywords, description
     
 
 def build_detect_interface():
@@ -26,6 +37,8 @@ def build_detect_interface():
         gr.Markdown("""
         There are 4 different tabs, 3 for anaalysis which can simultaneously run at the same time and a description tab which talks about what this program does. Enjoy!
         """)
+        api_key_input = gr.Textbox(label="OpenAI API Key", placeholder="Enter your OpenAI API key here", type="password")
+        
         with gr.Tab("Description"):
             gr.Markdown("""
             Created by Chinedu Ike-Anyanwu, this NLP tool is designed to analyze text, extract and rank keywords, and generate descriptive summaries or answers to specific questions. It leverages advanced AI models to provide insights into the provided text, making it a valuable resource for faculty and students of Rowan University.
@@ -57,7 +70,7 @@ def build_detect_interface():
             
             clear_comp_list1 = [text1, question1, num_words1, quality1, temperature1, entities1, keywords1, description1]
 
-            analyze_btn1.click(fn=complete_analysis, inputs=[text1, question1, num_words1, quality1, temperature1], outputs=[entities1, keywords1, description1])
+            analyze_btn1.click(fn=complete_analysis, inputs=[text1, question1, num_words1, quality1, temperature1, api_key_input], outputs=[entities1, keywords1, description1])
             clear_but1 = gr.ClearButton(value='Clear All',components=clear_comp_list1,
                     interactive=True,visible=True)
             
@@ -80,7 +93,7 @@ def build_detect_interface():
             
             clear_comp_list2 = [text2, question2, num_words2, quality2, temperature2, entities2, keywords2, description2]
 
-            analyze_btn2.click(fn=complete_analysis, inputs=[text2, question2, num_words2, quality2, temperature2], outputs=[entities2, keywords2, description2])
+            analyze_btn2.click(fn=complete_analysis, inputs=[text2, question2, num_words2, quality2, temperature2, api_key_input], outputs=[entities2, keywords2, description2])
             clear_but2 = gr.ClearButton(value='Clear All',components=clear_comp_list2,
                     interactive=True,visible=True)
             
@@ -103,7 +116,7 @@ def build_detect_interface():
             
             clear_comp_list3 = [text3, question3, num_words3, quality3, temperature3, entities3, keywords3, description3]
 
-            analyze_btn3.click(fn=complete_analysis, inputs=[text3, question3, num_words3, quality3, temperature3], outputs=[entities3, keywords3, description3])
+            analyze_btn3.click(fn=complete_analysis, inputs=[ text3, question3, num_words3, quality3, temperature3, api_key_input], outputs=[entities3, keywords3, description3])
             clear_but3 = gr.ClearButton(value='Clear All',components=clear_comp_list3,
                     interactive=True,visible=True)
     return iface

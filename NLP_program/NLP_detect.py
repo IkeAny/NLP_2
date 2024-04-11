@@ -11,9 +11,6 @@ sys.path.append('NLP_program')
 sys.path.append('NLP_MachineLearning')
 sys.path.append('./')
 
-# Set your OpenAI API key
-openai.api_key = "your_openai_api_key"
-
 # Load the custom-trained spaCy model for sentiment analysis
 try:
     nlp_sentiment = spacy.load("model_sentiment")  # Adjust this path to your model
@@ -40,7 +37,8 @@ def analyze_text(text, num_words=10):
     entities_df = pd.DataFrame(entities, columns=["Entity", "Type"])
     
     # TF-IDF and Keyword Extraction
-    custom_stop_words = set(ENGLISH_STOP_WORDS).union({"you", "for", "like", "got", "going", "said", "thing"})
+    custom_stop_words = set(ENGLISH_STOP_WORDS).union({"you", "for", "like", "got", "going", "said", "thing", 
+                                                       "i'm","me","say","hey","bit","say,","hey,","little","you'd","year,"})
     vectorizer = TfidfVectorizer(stop_words=list(custom_stop_words))
     tf_idf_matrix = vectorizer.fit_transform([text])
     feature_array = vectorizer.get_feature_names_out()
@@ -53,12 +51,13 @@ def analyze_text(text, num_words=10):
     
     return entities_df, keywords_df, sentiment_score
 
-def generate_description(question, text, keywords, quality="Speed", temperature=0.7):
+def generate_description(question, text, keywords, quality, temperature, api_key):
     """
     Generates a description using OpenAI's GPT-3.5 Turbo model based on the input text,
     incorporating the provided question (if any), focusing on the important keywords,
     and adjusting for quality and temperature. The response is structured to emphasize a third-person narrative, starting with 'students'.
     """
+    openai.api_key = api_key
 
     keywords_str = ", ".join(keywords)
     
@@ -71,7 +70,7 @@ def generate_description(question, text, keywords, quality="Speed", temperature=
         prompt = f"{introduction} They summarize the following text, making sure to emphasize these keywords: {keywords_str}. Text: '{text}'"
     
     model = "gpt-3.5-turbo-instruct" if quality == "Speed" else "gpt-3.5-turbo-instruct-0914"
-    max_tokens = 200 if quality == "Speed" else 300
+    max_tokens = 350 if quality == "Speed" else 500
 
     response = openai.Completion.create(
         model=model,
@@ -81,19 +80,3 @@ def generate_description(question, text, keywords, quality="Speed", temperature=
     )
     
     return response['choices'][0]['text'].strip()
-
-
-# Example usage
-# if __name__ == "__main__":
-#     text_example = "This is an example text for testing. The quick brown fox jumps over the lazy dog."
-#     question_example = ""
-#     num_words_example = 5
-    
-#     entities_df, keywords_df, sentiment_score = analyze_text(text_example, num_words_example)
-#     print("Named Entities:", entities_df)
-#     print("Keywords:", keywords_df)
-#     print("Sentiment Score:", sentiment_score)
-    
-#     keywords = [keyword for keyword, count in keywords_df["Keyword"].items()]
-#     description = generate_description(question_example, text_example, keywords, quality="Speed", temperature=0.5)
-#     print("Generated Description:", description)
