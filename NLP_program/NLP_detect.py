@@ -38,7 +38,7 @@ def analyze_text(text, num_words=10):
     
     # TF-IDF and Keyword Extraction
     custom_stop_words = set(ENGLISH_STOP_WORDS).union({"you", "for", "like", "got", "going", "said", "thing", 
-                                                       "i'm","me","say","hey","bit","say,","hey,","little","you'd","year,"})
+                                                       "i'm","me","say","hey","bit","say,","hey,","little","you'd"})
     vectorizer = TfidfVectorizer(stop_words=list(custom_stop_words))
     tf_idf_matrix = vectorizer.fit_transform([text])
     feature_array = vectorizer.get_feature_names_out()
